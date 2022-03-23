@@ -1,0 +1,49 @@
+body {
+    background-color: #394b61;
+}
+
+header {
+    background-color: #5e92c4;
+    padding: 5px 0px 5px 5px;
+}
+
+    header img {
+        display: block;
+    }
+
+nav {
+    list-style-type: none;
+    padding: 0;
+    background-color: #5e92c4;
+    margin: 10px 0px 10px 0px;
+}
+
+    nav:after {
+        content: '';
+        display: block;
+        clear: both;
+    }
+
+    nav a {
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 10px 10px;
+        text-decoration: none;
+        float: left;
+    }
+
+.item:hover {
+    background-color: #4e82b4;
+}
+
+.active {
+    background-color: #3e72a4;
+}
+
+main {
+    min-height: 775px;
+    background-color: #5e92c4;
+    border-radius: 5px;
+    padding: 10px;
+}

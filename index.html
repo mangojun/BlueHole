@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>BlueHole</title>
+    <link rel="shortcut icon" href="./images/icon.ico">
+    <meta charset="utf-8" />
+    <style>
+        body {
+            background-color: #1e3c72;
+            background: linear-gradient(to left, #1e3c72, #2a5298);
+        }
+
+        nav {
+            float: right;
+        }
+
+            nav ul {
+                list-style: none;
+            }
+
+        .item {
+            float: left;
+        }
+
+            .item a {
+                float: left;
+                color: #f8f7f3;
+                font-size: small;
+                padding: 5px;
+            }
+
+        .icons {
+            font-family: Material Icons;
+        }
+
+        button {
+            margin: 0px 10px 0px 10px;
+            color: black;
+            background-color: #f8f7f3;
+            padding: 5px;
+            border: 0;
+            border-radius: 5px;
+        }
+
+        main {
+            width: 900px;
+            position: absolute;
+            left: 50%;
+            transform: translateY(-50%) translateX(-50%);
+            text-align: center;
+            height: max-content;
+            margin-top: 530px;
+        }
+
+        article {
+            color: #f8f7f3;
+            font-family: Arial, sans-serif;
+        }
+
+            article:nth-child(1) {
+                font-size: 25px;
+            }
+
+            article:nth-child(4) {
+                font-size: 60px;
+            }
+
+            article:nth-child(6) {
+                font-size: 15px;
+            }
+
+        a {
+            color: black;
+            text-decoration: none;
+        }
+
+        #start {
+            margin: 0px;
+            padding: 10px;
+            font-size: large;
+        }
+
+        #footer {
+            width: 800px;
+            margin-top: 50px;
+            padding-bottom: 25px;
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <img src="images/logo.png" width="150" alt="BlueHole" />
+        <nav>
+            <ul>
+                <li class="item"><a href="gallery.php"><span class="icons">collections</span> 갤러리</a></li>
+                <li class="item"><a href="change.html"><span class="icons">work_history</span> 변경점</a></li>
+                <li class="item"><a href="community.html"><span class="icons">forum</span> 커뮤니티</a></li>
+                <li class="item"><button onclick="location.href='https://github.com/mangojun/BlueHole'">깃허브</button></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <article>언제, 어디서든, 누구나</article><br /><br />
+            <article>이미지를 업로드하고, 편집해서 쉽게 공유합니다.</article><br /><br />
+            <article>다른 사람에게 공유하고 싶은 이미지와 글을 공유하고 관리하세요. <br />또한 업로드한 이미지를 서버에 저장합니다.</article><br />
+            <article><p><button id="start" onclick="location.href = 'gallery.php'">무료로 시작하기</button></p></article>
+        </section>
+        <img src="images/footer.png" id="footer" />
+    </main>
+</body>
+</html>
