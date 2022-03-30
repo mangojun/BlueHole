@@ -55,7 +55,7 @@
     <main>
         <form action="./process/create.php" method="post">
             <h1>제목</h1>
-            <input type="text" name="title" placeholder="여기에 제목을 입력하세요." /><br />
+            <input type="text" name="title" placeholder="여기에 제목을 입력하세요." onkeyup="this.value = this.value.replace(' ', '_')" required/><br />
             <h1>본문</h1>
             <textarea id="description" name="description" placeholder="여기에 본문을 입력하세요."></textarea><br />
             <input type="hidden" role="uploadcare-uploader" data-public-key="81402b0924e09db17275" data-tabs="file camera url facebook gdrive gphotos" data-effects="crop, rotate, flip, blur, enhance, grayscale" />

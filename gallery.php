@@ -74,7 +74,6 @@
 		                while($i < count($list)) {
 			                if($list[$i] != ".") {
 				                if($list[$i] != "..") {
-                                    echo "<button class='document' onclick=location.href='./document.php?id=".$list[$i]."'>".$list[$i]."</button>";
                                     echo "<button class='document' onclick='location.href=`./document.php?id=".$list[$i]."`'>".$list[$i]."</button>";
 				                }
 			                }

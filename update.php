@@ -56,7 +56,7 @@
         <form action="./process/update.php" method="post">
             <?PHP echo "<input type='hidden' name='old_title' value='".$_GET["id"]."' />"; ?>
             <h1>제목</h1>
-            <input type="text" name="title" placeholder="여기에 제목을 입력하세요." value="<?PHP if(isset($_GET["id"])) {echo $_GET["id"];} else {echo "알 수 없는 문서입니다.";} ?>" /><br />
+            <input type="text" name="title" placeholder="여기에 제목을 입력하세요." onkeyup="this.value = this.value.replace(' ', '_')" required value="<?PHP if(isset($_GET["id"])) {echo $_GET["id"];} else {echo "알 수 없는 문서입니다.";} ?>" /><br />
             <h1>본문</h1>
             <textarea id="description" name="description" placeholder="여기에 본문을 입력하세요."><?PHP if(isset($_GET["id"])) {echo file_get_contents("data/".$_GET["id"]);} ?></textarea><br />
             <input type="hidden" role="uploadcare-uploader" data-public-key="81402b0924e09db17275" data-tabs="file camera url facebook gdrive gphotos" data-effects="crop, rotate, flip, blur, enhance, grayscale" />
