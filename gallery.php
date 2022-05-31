@@ -1,89 +1,57 @@
 <!DOCTYPE html>
-
 <html>
 <head>
-    <title>BlueHole</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="./images/icon.ico">
     <link rel="stylesheet" href="./index.css">
-    <meta charset="utf-8" />
+    <title>BlueHole</title>
     <style>
-        #texts {
-            width: 100%;
-            height: 100%;
-            margin-top: 10px
+        main {
+            width: width: calc(100% - 20px);
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(150px, auto));
+            grid-auto-rows: 40px;
+            gap: 5px;
+            margin: 10px 10px 10px 10px;
         }
 
-            #texts button {
-                margin: 0px 10px 0px 0px;
-                background-color: navy;
+            main a {
+                color: #000;
+                text-decoration: none;
+                border: #ddd solid 1px;
                 border-radius: 5px;
-                border: 0px;
-                padding: 5px 10px 5px 10px;
-                font-size: medium;
-                color: white;
+                text-align: center;
+                padding: 7px;
             }
-
-        #searchbar {
-            width: calc(100% - 132px);
-            height: 35px;
-            border: 0px;
-            border-radius: 5px;
-            background-color: #bedafb;
-            float: left;
-            padding: 0px 0px 0px 5px;
-            outline: none;
-        }
-
-        button {
-            margin: 0px 5px 0px 10px;
-            height: 35px;
-            border: 0px;
-            border-radius: 5px;
-            background-color: #394b61;
-            color: white;
-            font-size: medium;
-        }
-
-        #upload {
-            margin: 0;
-            background-color: #007fff;
-        }
     </style>
 </head>
-    <body>
-        <header>
-            <div>
-                <a href="./index.html"><img src="./images/logo.png" alt="BluHole" width="300"></a>
-            </div>
-        </header>
-        <nav>
-            <a href="./gallery.html" class="active">갤러리</a>
-            <a href="./change.html" class="item">변경점</a>
-            <a href="./community.html" class="item">커뮤니티</a>
-        </nav>
-        <main>
-            <div>
-                <input type="text" name="q" id="searchbar" placeholder="여기에 검색하세요...">
-                <button class="button" onclick="search()">검색</button>
-                <button class="button" id="upload" onclick=location.href='./upload.html'>업로드</button>
-                <div id="texts">
-                    <?PHP
-                        $list = scandir("./data");
-                        
-		                $i = 0;
-		                while($i < count($list)) {
-			                if($list[$i] != ".") {
-				                if($list[$i] != "..") {
-                                    echo "<button class='document' onclick='location.href=`./document.php?id=".$list[$i]."`'>".$list[$i]."</button>";
-				                }
-			                }
-			                $i = $i + 1;
-		                }
-                    ?>
-
-                </div>
-            </div>
-        </main>
-        <script src="./scripts/gallery.js"></script>
-    </body>
+<body>
+    <div id="screen">BlueHole은 데스크톱 컴퓨터에 최적화된 사이트입니다. 382px보다 작은 모니터를 이용할 경우 사용할 수 없습니다.</div>
+    <header>
+        <div id="logo"><a href="./index.html"><img src="./images/logo.png" alt="bluehole" width="110"></a></div>
+        <div id="active"><a href="./gallery.php">갤러리</a></div>
+        <div><a href="./change.html">변경점</a></div>
+        <div><a href="./community.html">커뮤니티</a></div>
+        <div><a href="./upload.html">업로드</a></div>
+        <input id="search" type="text" placeholder="여기에 검색하세요..." onkeyup="search()" />
+    </header>
+    <main>
+        <?PHP
+            $list = scandir("./data");
+            
+            $i = 0;
+            while($i < count($list)) {
+                if($list[$i] != ".") {
+                    if($list[$i] != "..") {
+                        echo "<a class='document' href='./document.php?id=".$list[$i]."'>".$list[$i]."</a>";
+                    }
+                }
+                $i = $i + 1;
+            }
+        ?>
+    </main>
+    <script src="./scripts/gallery.js"></script>
+</body>
 </html>

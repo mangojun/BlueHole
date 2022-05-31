@@ -1,24 +1,30 @@
 <!DOCTYPE html>
-
 <html>
 <head>
-    <title>BlueHole</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="./images/icon.ico">
     <link rel="stylesheet" href="./index.css">
-    <meta charset="utf-8" />
+    <title>BlueHole</title>
+    <style>
+        article {
+            padding: 10px;
+        }
+    </style>
 </head>
-    <body>
-        <header>
-            <div>
-                <a href="./index.html"><img src="./images/logo.png" alt="logo" width="300"></a>
-            </div>
-        </header>
-        <nav>
-                <a href="./gallery.php" class=item>갤러리</a>
-                <a href="./change.html" class="item">변경점</a>
-                <a href="./community.html" class="active">커뮤니티</a>
-        </nav>
-        <main>
+<body>
+    <div id="screen">BlueHole은 데스크톱 컴퓨터에 최적화된 사이트입니다. 382px보다 작은 모니터를 이용할 경우 사용할 수 없습니다.</div>
+    <header>
+        <div id="logo"><a href="./index.html"><img src="./images/logo.png" alt="bluehole" width="110"></a></div>
+        <div><a href="./gallery.php">갤러리</a></div>
+        <div><a href="./change.html">변경점</a></div>
+        <div id="active"><a href="./community.html">커뮤니티</a></div>
+        <div><a href="./upload.html">업로드</a></div>
+        <input id="search" type="text" placeholder="여기에 검색하세요..." onkeyup="search()" />
+    </header>
+    <main>
+        <article>
             <div id="disqus_thread"></div>
             <script>
                 (function () {
@@ -28,7 +34,8 @@
                     (d.head || d.body).appendChild(s);
                 })();
             </script>
-            <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-        </main>
-    </body>
+        <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+        </article>
+    </main>
+</body>
 </html>

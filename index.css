@@ -1,49 +1,101 @@
-body {
-    background-color: #394b61;
+#screen {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: calc(100% - 20px);
+    height : 100%;
+    color: #fff;
+    text-align: center;
+    padding: 50px 10px;
+    background-color: rgba(51, 68, 102, 0.95);
+    z-index: 1;
 }
 
 header {
-    background-color: #5e92c4;
-    padding: 5px 0px 5px 5px;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: #49f;
+    height: 60px;
+    width: 100%;
+    box-shadow: 0 5px 20px -15px black;
 }
-
-    header img {
-        display: block;
-    }
-
-nav {
-    list-style-type: none;
-    padding: 0;
-    background-color: #5e92c4;
-    margin: 10px 0px 10px 0px;
-}
-
-    nav:after {
-        content: '';
-        display: block;
-        clear: both;
-    }
-
-    nav a {
-        display: block;
-        color: white;
+    header div {
         text-align: center;
-        padding: 10px 10px;
-        text-decoration: none;
-        float: left;
+        margin-left: 0;
+        padding: 20px 10px;
+    }
+    
+    header input {
+        color: #fff;
+        border: 0;
+        border-radius: 5px;
+        margin: 10px;
+        background-color: #48e;
+        padding: 13px;
+        width: 332px;
     }
 
-.item:hover {
-    background-color: #4e82b4;
-}
+    header div a {
+        color: #fff;
+        text-decoration: none;
+        font-size: 0.9rem;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: 550;
+        display: block;
+    }
 
-.active {
-    background-color: #3e72a4;
-}
+    header div:hover {
+        background-color: #48e;
+    }
+
+    header #active{
+        background-color: #3a80e5;
+    }
+    
+    header input::placeholder {
+        border: 0px;
+        color: #fff;
+    }
+
+    #logo:hover {
+        background-color: rgba(0, 0, 0, 0);
+        animation-name: hover;
+        animation-duration: 0.5s;
+        animation-fill-mode: forwards;
+    }
 
 main {
-    min-height: 775px;
-    background-color: #5e92c4;
-    border-radius: 5px;
-    padding: 10px;
+    position: absolute;
+    left: 0;
+    top: 60px;
+    width: calc(100% - 20px);
+    min-height: calc(100% - 80px);
+}
+
+@keyframes hover {
+    from {
+        transform: scale(1);
+    }
+
+    to {
+        transform: scale(1.2);
+    }
+}
+
+@media (min-width: 437px) {
+    #screen {
+        display: none;
+    }
+}
+
+@media (max-width: 833px) {
+    #search {
+        display: none;
+    }
 }

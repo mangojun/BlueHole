@@ -34,12 +34,11 @@
             font-family: Material Icons;
         }
 
-        button {
+        #button {
             margin: 0px 10px 0px 10px;
             color: black;
             background-color: #f8f7f3;
             padding: 5px;
-            border: 0;
             border-radius: 5px;
         }
 
@@ -79,6 +78,9 @@
             margin: 0px;
             padding: 10px;
             font-size: large;
+            color: black;
+            background-color: #f8f7f3;
+            border-radius: 5px;
         }
 
         #footer {
@@ -97,7 +99,7 @@
                 <li class="item"><a href="gallery.php"><span class="icons">collections</span> 갤러리</a></li>
                 <li class="item"><a href="change.html"><span class="icons">work_history</span> 변경점</a></li>
                 <li class="item"><a href="community.html"><span class="icons">forum</span> 커뮤니티</a></li>
-                <li class="item"><button onclick="location.href='https://github.com/mangojun/BlueHole'">깃허브</button></li>
+                <li class="item"><a id="button" href="https://github.com/mangojun/BlueHole">깃허브</a></li>
             </ul>
         </nav>
     </header>
@@ -106,7 +108,7 @@
             <article>언제, 어디서든, 누구나</article><br /><br />
             <article>이미지를 업로드하고, 편집해서 쉽게 공유합니다.</article><br /><br />
             <article>다른 사람에게 공유하고 싶은 이미지와 글을 공유하고 관리하세요. <br />또한 업로드한 이미지를 서버에 저장합니다.</article><br />
-            <article><p><button id="start" onclick="location.href = 'gallery.php'">무료로 시작하기</button></p></article>
+            <article><p><a id="start" href="gallery.php">무료로 시작하기</a></p></article>
         </section>
         <img src="images/footer.png" id="footer" />
     </main>
